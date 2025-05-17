@@ -1,4 +1,4 @@
-declare module 'Kool' {
+declare module 'Koool' {
   export const KoolButton: any;
   export const KoolCard: any;
   export const KoolText: any;
