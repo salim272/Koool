@@ -1,0 +1,31 @@
+declare module 'Kool' {
+    export const KoolButton: any;
+    export const KoolCard: any;
+    export const KoolText: any;
+    export const KoolInput: any;
+    export const KoolBadge: any;
+    export const KoolTabBar: any;
+    export const KoolLoginModal: any;
+    export const KoolOtpInput: any;
+    export const KoolSpacer: any;
+    export const KoolLine: any;
+    export const KoolAudioRecorder: any;
+    export const KoolSearchBar: any;
+    export const KoolBlinkText: any;
+    export const KoolPhotoUploader: any;
+    export const KoolCartButton: any;
+    export const KoolProfileCard: any;
+    export const KoolHorizontalScroller: any;
+    export const KoolVerticalImageTextButton: any;
+    export const KoolImage: any;
+    export const AboutUs: any;
+    export const Contact: any;
+    export const FAQ: any;
+    export const Legal: any;
+    export const Result: any;
+    export const KoolSubTitle: any;
+    export const useTheme: any;
+    export const Orders: any;
+    export const EstimateOrderDetails: any;
+    export const StatusTracker: any;
+}

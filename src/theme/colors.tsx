@@ -1,0 +1,26 @@
+const Colors: { [key: string]: string } = {
+  textGray: '#848281',
+  blink: '#239ED0',
+  PRIMARY_1: '#076E92',
+  PRIMARY_2: '#FFFFFF',
+  NEUTRAL_1: '#212529',
+  NEUTRAL_2: '#343A40',
+  NEUTRAL_3: '#495057',
+  NEUTRAL_4: '#6C757D',
+  NEUTRAL_5: '#ADB5BD',
+  NEUTRAL_6: '#CED4DA',
+  NEUTRAL_7: '#DEE2E6',
+  NEUTRAL_8: '#E9ECEF',
+  NEUTRAL_9: '#F8F9FA',
+  SECONDARY_1: '#F26522',
+  SUCCESS: '#15A51B',
+  ERROR: '#E62649',
+  INFORMATION: '#0384F4',
+  WARNING: '#FF9800',
+  INVOICED: '#CDF2CF',
+  INVOICED_TEXT: '#2E7D32',
+  CLOSED: '#E9ECEF',
+  CLOSED_TEXT: '#495057',
+};
+
+export default Colors;

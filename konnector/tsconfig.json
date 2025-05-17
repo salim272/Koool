@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "target": "ES6",  
+      "lib": ["ES2015", "DOM"],  
+      "module": "ESNext",
+      "strict": true,
+      "jsx": "react-native",
+      "moduleResolution": "node"
+    }
+  }
+  
