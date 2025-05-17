@@ -26,6 +26,7 @@ import Orders from './src/fullscreens/order/Orders';
 import EstimateOrderDetails from './src/fullscreens/order/EstimateOrderDetails';
 import StatusTracker from './src/fullscreens/order/StatusTracker';
 import { useTheme } from './src/theme/useTheme';
+import useTranslation from './src/translations/useTranslation';
 
 export {
   KoolButton,
@@ -55,5 +56,6 @@ export {
   Result,
   Orders,
   EstimateOrderDetails,
-  StatusTracker
+  StatusTracker,
+  useTranslation,
 };
