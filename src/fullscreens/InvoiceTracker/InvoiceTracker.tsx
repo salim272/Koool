@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import KoolSwipeTabs from '../../components/KoolSwipeTabs';
 import { getConfirmOrders } from '../../apis/order/order';
 import moment from 'moment';
@@ -49,7 +49,6 @@ const InvoiceTracker = ({ navigation }: NavigationProps) => {
   }, [fromDate, toDate]);
 
   useEffect(() => {
-    resetDates();
     fetchInvoiceDetails();
   }, [resetDates, fetchInvoiceDetails]);
 
