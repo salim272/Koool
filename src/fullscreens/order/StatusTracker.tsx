@@ -68,7 +68,7 @@ const KoolOrderCard = ({ route }) => {
     <View
       style={{
         flex: 1,
-        backgroundColor: Colors.PRIMARY_2,
+        backgroundColor: Colors?.PRIMARY_2,
         paddingHorizontal: 5,
       }}
     >
