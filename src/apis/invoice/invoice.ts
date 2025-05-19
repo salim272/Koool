@@ -1,4 +1,4 @@
-import konnector from '@konnector';
+import konnector from '../../apis/apiClient';
 import { InvoiceItem } from '../../theme/commonTypes';
 
 export interface OrderDateRange {

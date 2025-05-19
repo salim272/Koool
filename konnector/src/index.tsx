@@ -8,6 +8,7 @@ import {
   getEstimateOrderDetails,
   getEstimateOrders,
 } from './api/orderApi';
+import { getInvoiceDetails } from './api/invoiceApi';
 
 export const initializeKonnector = (baseURL: string) => {
   const Konnector = createAxiosInstance(baseURL);
@@ -26,6 +27,8 @@ export const initializeKonnector = (baseURL: string) => {
       getEstimateOrderDetails(Konnector, id),
     getConfirmOrderDetails: (id: string) =>
       getConfirmOrderDetails(Konnector, id),
+    getInvoiceDetails: (data: OrderDateRange) =>
+      getInvoiceDetails(Konnector, data),
   };
 };
 

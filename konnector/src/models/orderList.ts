@@ -20,11 +20,11 @@ export interface OrderItem {
   enquiryNumber?: number;
 }
 interface FilteredSalesOrderItem {
-  assignedToName: string | null;
+  assignedToName?: string;
   soQty: number;
   totalPrice: string;
   prdBrand: string;
-  etaDate: string | null;
+  etaDate?: string;
   fuelType: string;
   yearOfMfg: string;
   make: string;
@@ -82,7 +82,6 @@ interface FilteredSalesOrderItem {
   vehicleVariant: string;
 }
 
-
 interface BillingAddress {
   id: string;
   street: string;
@@ -107,7 +106,6 @@ interface PosOrderItem {
   fuelType: string;
   vehicleVariant: string;
 }
-
 
 export const mapRawEstimateOrdersDetailsItems = (
   rawOrder: any
@@ -137,8 +135,9 @@ export const mapRawEstimateOrdersDetailsItems = (
   };
 };
 
-
-export const mapBillingAddress = (billingAddress: BillingAddress): BillingAddress => ({
+export const mapBillingAddress = (
+  billingAddress: BillingAddress
+): BillingAddress => ({
   id: billingAddress.id,
   street: billingAddress?.addressDescription1,
   location: billingAddress.location,
@@ -148,7 +147,9 @@ export const mapBillingAddress = (billingAddress: BillingAddress): BillingAddres
   phoneNumber: billingAddress.phoneNumber,
 });
 
-export const mapPosOrderItems = (posOrderItems: PosOrderItem[]): PosOrderItem[] =>
+export const mapPosOrderItems = (
+  posOrderItems: PosOrderItem[]
+): PosOrderItem[] =>
   posOrderItems.map((item: PosOrderItem) => ({
     orderType: item.orderType,
     materialCategoryName: item.materialCategoryName,
