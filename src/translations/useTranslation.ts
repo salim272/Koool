@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { TranslationService } from './translation';
 
-export default function useTranslation() {
+export const useTranslation = () => {
   const [_, forceUpdate] = useState({});
 
   useEffect(() => {
@@ -15,4 +15,4 @@ export default function useTranslation() {
     setLanguage: TranslationService.setLanguage,
     availableLanguages: TranslationService.getAvailableLanguages(),
   };
-}
+};
