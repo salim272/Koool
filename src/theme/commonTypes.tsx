@@ -1,7 +1,6 @@
 import { TextStyle, ViewStyle, ImageStyle } from 'react-native';
 //@ts-ignore
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { InvoiceItem } from '../../../konnector/src/models/invoiceList';
 
 type NamedStyles<T> = { [P in keyof T]: ViewStyle | TextStyle | ImageStyle };
 
@@ -36,6 +35,16 @@ export interface OrderItem {
   etaDt?: string;
   enquiryNumber?: number;
 }
+export interface InvoiceItem {
+  paymentStatus: string;
+  invoiceTotalAmount: string;
+  invoiceDt: string;
+  invoiceId: string;
+  returnAmt: string;
+  RESPONSE_BODY?: any;
+  outstandingAmt: string;
+  status?: string;
+}
 
 export interface SingleOrderProps {
   fromDate: string;
@@ -51,4 +60,5 @@ export interface SingleOrderProps {
   confirmOrdersList?: OrderItem[];
   accessibilityLabel?: string;
   invoiceDetails?: InvoiceItem[];
+  onPress?: () => void;
 }

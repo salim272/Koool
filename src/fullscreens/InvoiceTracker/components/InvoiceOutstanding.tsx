@@ -6,7 +6,7 @@ import { useTheme } from '../../../theme/useTheme';
 import InvoiceCard from './InvoiceCard';
 import KoolDateSelector from '../../order/KoolDateSelector';
 
-const InvoiceOutstanding: React.FC<SingleOrderProps> = ({
+const InvoiceOutstanding = ({
   fromDate,
   toDate,
   refreshing,
@@ -17,7 +17,7 @@ const InvoiceOutstanding: React.FC<SingleOrderProps> = ({
   handleConfirm,
   hideDatePicker,
   navigation,
-}) => {
+}: SingleOrderProps) => {
   const { AppFont, wp, Colors } = useTheme() as ThemeUtils;
   const estimateOrdersList = [
     {

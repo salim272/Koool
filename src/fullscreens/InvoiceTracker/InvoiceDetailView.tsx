@@ -1,23 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import KoolSwipeTabs from '../../components/KoolSwipeTabs';
-import {
-  getEstimateOrders,
-  getConfirmOrders,
-} from '../../../../src/apis/order/order';
-import { OrderItem } from '../../../../konnector/src/models/orderList';
+import { getEstimateOrders, getConfirmOrders } from '../../apis/order/order';
 import moment from 'moment';
 import { NavigationProps } from '../../theme/commonTypes';
 import { dateFormat, subtractDaysFromToday } from '../../utils/dateFormat';
 import SingleInvoice from './components/SingleInvoice';
 import InvoiceDispatch from './components/InvoiceDispatch';
 
-const InvoiceDetailView: React.FC<NavigationProps> = ({ navigation }) => {
-  const [refreshing, setRefreshing] = useState<boolean>(false);
+const InvoiceDetailView = ({ navigation }: NavigationProps) => {
+  const [refreshing, setRefreshing] = useState(false);
   const [fromDate, setFromDate] = useState(subtractDaysFromToday());
   const [toDate, setToDate] = useState(moment().format('DD-MM-YYYY'));
-  const [isDatePickerVisible, setDatePickerVisible] = useState<boolean>(false);
-  const [estimateOrdersList, setEstimateOrdersList] = useState<OrderItem[]>([]);
-  const [confirmOrdersList, setConfirmOrdersList] = useState<OrderItem[]>([]);
+  const [isDatePickerVisible, setDatePickerVisible] = useState(false);
+  const [estimateOrdersList, setEstimateOrdersList] = useState([]);
+  const [confirmOrdersList, setConfirmOrdersList] = useState([]);
   const [currentDateField, setCurrentDateField] = useState(null);
   const [activeTab, setActiveTab] = useState('details');
 

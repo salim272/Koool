@@ -6,7 +6,7 @@ import { useTheme } from '../../../theme/useTheme';
 import InvoiceCard from './InvoiceCard';
 import KoolDateSelector from '../../../components/KoolDateSelector';
 
-const InvoiceDetails: React.FC<SingleOrderProps> = ({
+const InvoiceDetails = ({
   fromDate,
   toDate,
   refreshing,
@@ -17,30 +17,9 @@ const InvoiceDetails: React.FC<SingleOrderProps> = ({
   handleConfirm,
   hideDatePicker,
   navigation,
-}) => {
+}: SingleOrderProps) => {
   const { AppFont, wp, Colors } = useTheme() as ThemeUtils;
-  const estimateOrdersList = [
-    {
-      id: '1',
-      invoiceNumber: '#60004131',
-      invoiceDate: '10-10-2024',
-      payStatus: 'Open',
-      invoiceAmount: 3400,
-      returnAmount: 340,
-      outstandingAmount: 100,
-      status: 'OPEN',
-    },
-    {
-      id: '2',
-      invoiceNumber: '#60004132',
-      invoiceDate: '12-10-2024',
-      payStatus: 'Pending',
-      invoiceAmount: 5000,
-      returnAmount: 123,
-      outstandingAmount: 500,
-      status: 'CLOSED',
-    },
-  ];
+
   return (
     <View style={{ flex: 1 }}>
       <View

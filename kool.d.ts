@@ -29,4 +29,6 @@ declare module 'Koool' {
   export const EstimateOrderDetails: any;
   export const StatusTracker: any;
   export const useTranslation: any;
+  export const InvoiceTracker: any;
+  export const InvoiceDetailView: any;
 }

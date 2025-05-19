@@ -27,6 +27,8 @@ import EstimateOrderDetails from './src/fullscreens/order/EstimateOrderDetails';
 import StatusTracker from './src/fullscreens/order/StatusTracker';
 import { useTheme } from './src/theme/useTheme';
 import { useTranslation } from './src/translations/useTranslation';
+import InvoiceDetailView from './src/fullscreens/InvoiceTracker/InvoiceDetailView';
+import InvoiceTracker from './src/fullscreens/InvoiceTracker/InvoiceTracker';
 
 export {
   KoolButton,
@@ -58,4 +60,6 @@ export {
   EstimateOrderDetails,
   StatusTracker,
   useTranslation,
+  InvoiceTracker,
+  InvoiceDetailView,
 };

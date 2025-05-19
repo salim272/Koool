@@ -1,28 +1,23 @@
-import React, { useEffect, useState, useCallback, useMemo } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import KoolSwipeTabs from '../../components/KoolSwipeTabs';
-import { getConfirmOrders } from '../../../../src/apis/order/order';
+import { getConfirmOrders } from '../../apis/order/order';
 import moment from 'moment';
 import { NavigationProps } from '../../theme/commonTypes';
 import InvoiceDetails from './components/InvoiceDetails';
 import { dateFormat, subtractDaysFromToday } from '../../utils/dateFormat';
 import InvoiceOutstanding from './components/InvoiceOutstanding';
-import { getInvoiceDetails } from '../../../../src/apis/invoice/invoice';
-import { InvoiceItem } from '../../../../konnector/src/models/invoiceList';
 import { invoiceTrackerRoute } from '../../utils/constants';
+import { getInvoiceDetails } from '../../apis/invoice/invoice';
 
-const InvoiceTracker: React.FC<NavigationProps> = ({ navigation }) => {
+const InvoiceTracker = ({ navigation }: NavigationProps) => {
   const [refreshing, setRefreshing] = useState(false);
   const [fromDate, setFromDate] = useState(subtractDaysFromToday());
   const [toDate, setToDate] = useState(moment().format('DD-MM-YYYY'));
   const [isDatePickerVisible, setDatePickerVisible] = useState(false);
-  const [invoiceDetails, setInvoiceDetails] = useState<InvoiceItem[]>([]);
-  const [confirmOrdersList, setConfirmOrdersList] = useState<InvoiceItem[]>([]);
-  const [currentDateField, setCurrentDateField] = useState<
-    'from' | 'to' | null
-  >(null);
-  const [activeTab, setActiveTab] = useState<'details' | 'outstanding'>(
-    'details'
-  );
+  const [invoiceDetails, setInvoiceDetails] = useState([]);
+  const [confirmOrdersList, setConfirmOrdersList] = useState([]);
+  const [currentDateField, setCurrentDateField] = useState(null);
+  const [activeTab, setActiveTab] = useState('details');
 
   const resetDates = useCallback(() => {
     setFromDate(subtractDaysFromToday());

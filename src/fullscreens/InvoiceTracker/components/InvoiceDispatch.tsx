@@ -7,7 +7,7 @@ import KoolDateSelector from '../../../components/KoolDateSelector';
 import InvoiceCard from './InvoiceCard';
 import KoolBorder from '../../../components/KoolBorder';
 
-const InvoiceDispatch: React.FC<SingleOrderProps> = ({
+const InvoiceDispatch = ({
   fromDate,
   toDate,
   refreshing,
@@ -18,7 +18,7 @@ const InvoiceDispatch: React.FC<SingleOrderProps> = ({
   handleConfirm,
   hideDatePicker,
   navigation,
-}) => {
+}: SingleOrderProps) => {
   const { AppFont, wp, Colors } = useTheme() as ThemeUtils;
   const estimateOrdersList = [
     {

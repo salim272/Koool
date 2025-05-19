@@ -6,14 +6,7 @@ import { ThemeUtils } from '../../../theme/commonTypes';
 import { useTheme } from '../../../theme/useTheme';
 import { dateFormat } from '../../../utils/dateFormat';
 
-interface KoolOrderCardProps {}
-
-const InvoiceCard: React.FC<KoolOrderCardProps> = ({
-  item,
-  onPress,
-  isEstimate,
-  isDispatch,
-}: any) => {
+const InvoiceCard = ({ item, onPress, isEstimate, isDispatch }: any) => {
   const { wp, hp, Colors, globalStyles } = useTheme() as ThemeUtils;
   const styles = makeStyles({ wp, hp, Colors });
   return (
