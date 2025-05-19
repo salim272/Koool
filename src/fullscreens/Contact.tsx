@@ -48,7 +48,7 @@ const Contact = () => {
     <SafeAreaView
       style={{
         flex: 1,
-        backgroundColor: Colors.PRIMARY_2,
+        backgroundColor: Colors?.PRIMARY_2,
         paddingTop: 30,
         padding: 20,
       }}

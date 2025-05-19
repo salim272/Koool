@@ -62,6 +62,6 @@ const makeStyles = ({ wp, hp, Colors }: ThemeUtils) =>
   StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: Colors.PRIMARY_2,
+      backgroundColor: Colors?.PRIMARY_2,
     },
   });

@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     paddingVertical: '2%',
     paddingHorizontal: '3%',
-    backgroundColor: Colors.PRIMARY_2,
+    backgroundColor: Colors?.PRIMARY_2,
   },
   faqHeader: {
     flexDirection: 'row',
